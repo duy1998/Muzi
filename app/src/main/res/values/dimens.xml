@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Search-->
+    <dimen name="search_avatar_height_size">70dp</dimen>
+    <dimen name="search_avatar_width_size">100dp</dimen>
+</resources>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Muzi</string>
+
+    <!--Search Component-->
+    <string name="search_hint">Search Youtube</string>
+    <string name="cancel">Cancel</string>
+    <string name="more">More</string>
+    <string name="done">Done</string>
+    <string name="views"> views</string>
+
+    <!--More Component-->
+    <string name="setting">SETTINGS</string>
+    <string name="language">Language</string>
+    <string name="country">Country</string>
+    <string name="trending_in">Trending in</string>
+    <string name="appearance">APPEARANCE</string>
+    <string name="darkmode">Dark Mode</string>
+    <string name="muzic_on_facebook">Muzic on Facebook</string>
+    <string name="connecting">Connect with Muzic on Facebook for app updates, announcaments, music memes and more.</string>
+    <string name="help_support">Help &amp; Support</string>
+    <string name="send_feedback">Send Feedback</string>
+    <string name="more">More</string>
+</resources>
