@@ -4,7 +4,6 @@
     <!--Search Component-->
     <string name="search_hint">Search Youtube</string>
     <string name="cancel">Cancel</string>
-    <string name="more">More</string>
     <string name="done">Done</string>
     <string name="views"> views</string>
 
@@ -20,4 +19,8 @@
     <string name="help_support">Help &amp; Support</string>
     <string name="send_feedback">Send Feedback</string>
     <string name="more">More</string>
+    <string name="create_new_playlist">Create new playlist</string>
+    <string name="add_to_favorite">Add to favorite</string>
+    <string name="classic_road_trip_songs">Classic road trip songs</string>
+    <string name="workout">Workout</string>
 </resources>

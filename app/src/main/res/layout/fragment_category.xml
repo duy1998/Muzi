@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:fitsSystemWindows="true"
+             android:background="@color/colorBackgroundFragment">
+    <ImageView android:layout_width="match_parent"
+               android:layout_height="275dp"
+               android:scaleType="fitXY"
+               android:src="@drawable/backgound_category"/>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemmeCategory"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+        <com.google.android.material.appbar.AppBarLayout
+                android:fitsSystemWindows="true"
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:outlineSpotShadowColor="#00000000">
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:fitsSystemWindows="true"
+                    android:background="@drawable/gradient_category_top"
+                    android:id="@+id/collapsing_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:expandedTitleGravity="center_horizontal"
+                    app:collapsedTitleGravity="center"
+                    app:collapsedTitleTextAppearance="@style/styleTextToolbar"
+                    app:expandedTitleTextAppearance="@style/styleTextToolbar1">
+                <TextView android:layout_width="wrap_content"
+                          android:id="@+id/tvView"
+                          android:layout_gravity="center_horizontal|center_vertical"
+                          android:layout_marginTop="50dp"
+                          android:layout_height="wrap_content"
+                          android:fontFamily="@font/sf_ui_display_bold"
+                          android:text="1.234.234 views"
+                          android:textColor="@color/colorText"/>
+                <androidx.appcompat.widget.Toolbar
+                        android:fitsSystemWindows="true"
+                        android:id="@+id/toolbar"
+                        android:paddingRight="50dp"
+                        app:layout_collapseMode="pin"
+                        app:title="Workout"
+                        android:layout_width="match_parent"
+                        android:gravity="top"
+                        android:layout_height="90dp">
+                    <ImageView android:layout_width="20dp"
+                               android:src="@mipmap/back"
+                               android:layout_height="20dp"
+                               android:contentDescription="@null"/>
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <FrameLayout android:layout_width="match_parent"
+                     android:layout_height="100dp"
+                     app:layout_anchor="@id/lnList"
+                     app:layout_anchorGravity="top">
+            <View android:layout_width="match_parent"
+                  android:layout_height="50dp"
+                  android:background="@drawable/gradient_category_bot">
+            </View>
+            <View android:layout_width="match_parent"
+                  android:layout_marginTop="50dp"
+                  android:layout_height="50dp"
+                  android:background="@color/colorBackgroundFragment">
+            </View>
+            <Button android:layout_width="184dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Shuffle Play"
+                    android:fontFamily="@font/sf_ui_display_regular"
+                    android:textColor="@color/colorText"
+                    android:background="@drawable/round_title_item"/>
+        </FrameLayout>
+        <LinearLayout
+                android:id="@+id/lnList"
+                android:layout_width="match_parent"
+                android:layout_marginTop="50dp"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:orientation="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/rvList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>
+

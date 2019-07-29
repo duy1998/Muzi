@@ -53,12 +53,12 @@ class SearchAdapter : RecyclerView.Adapter<SearchAdapter.SearchViewHolder>(){
 
     inner class SearchViewHolder(view: View) : RecyclerView.ViewHolder(view){
 //        private var thumnail = itemView.thumnailView
-        private var avatar = itemView.avatarImageView
-        private var duration = itemView.durationTextView
-        private var title = itemView.titleTextView
-        private var channel = itemView.channelTextView
-        private var viewCount = itemView.viewCountTextView
-        private var setting = itemView.settingImage
+        private var avatar = itemView.ivAvatar
+        private var duration = itemView.tvDuration
+        private var title = itemView.tvTitle
+        private var channel = itemView.tvChannel
+        private var viewCount = itemView.tvViewCount
+        private var setting = itemView.ivSetting
         fun bind(item: SearchItem){
 //            thumnail.initialize(Constant.API_KEY,object : YouTubeThumbnailView.OnInitializedListener{
 //                override fun onInitializationSuccess(p0: YouTubeThumbnailView?, p1: YouTubeThumbnailLoader?) {

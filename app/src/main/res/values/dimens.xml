@@ -3,4 +3,6 @@
     <!--Search-->
     <dimen name="search_avatar_height_size">70dp</dimen>
     <dimen name="search_avatar_width_size">100dp</dimen>
+    <!--Title-->
+    <dimen name="title_avatar_size">160dp</dimen>
 </resources>

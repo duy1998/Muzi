@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.muzi.R
+import com.example.muzi.data.SearchItem
 import kotlinx.android.synthetic.main.layout_recommend_keyword.view.*
 
 class KeywordAdapter : RecyclerView.Adapter<KeywordAdapter.KeywordViewHolder>() {
@@ -47,14 +48,22 @@ class KeywordAdapter : RecyclerView.Adapter<KeywordAdapter.KeywordViewHolder>() 
         notifyDataSetChanged()
     }
 
+    fun addMoreData(list: List<String>?){
+        val currCount = items.size
+        if (!list.isNullOrEmpty()) {
+            items.addAll(list)
+            notifyItemRangeInserted(currCount, list.size)
+        }
+    }
+
     override fun onBindViewHolder(holder: KeywordViewHolder, position: Int) {
         holder.bind(items[position])
     }
 
     inner class KeywordViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val boldText: TextView = itemView.boldTextView
+        private val boldText: TextView = itemView.tvBold
 
-        private val regularText: TextView = itemView.regularTextView
+        private val regularText: TextView = itemView.tvRegular
 
         fun bind(item: String) {
             boldText.text = keyword

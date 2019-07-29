@@ -2,28 +2,30 @@ package com.example.muzi.search
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.muzi.data.Resource
 import com.example.muzi.data.SearchItem
 import com.example.muzi.utils.isNetworkConnected
 import com.example.muzi.widget.Paging
 
 class SearchViewModel : ViewModel(){
 
-    var searchRepository: SearchRepository = SearchRepository()
+    val repository: Repository = Repository.getInstance()
 
-    var searchList = MutableLiveData<List<SearchItem>>()
+    var resourceSearchData = MutableLiveData<Resource<List<SearchItem>>>()
 
     val paging = Paging()
 
     fun init(){
-        searchList = searchRepository.getListSearch()
+        resourceSearchData = repository.getListSearch()
     }
 
     fun getDataSearch(s:String){
         if (isNetworkConnected()) {
             paging.isLoading = true
-            searchRepository.getSearchData(s,paging)
+            resourceSearchData.value = Resource.load()
+            repository.getSearchData(s,paging)
         } else {
-
+            resourceSearchData.value = Resource.error()
         }
     }
     fun resetPaging(){

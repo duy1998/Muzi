@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorWhite">#fff</color>
+    <color name="colorBlack">#000</color>
 
     <color name="colorBackgroundFragment">#0d0d0d</color>
     <!--search component-->
@@ -11,6 +12,8 @@
     <color name="cancelButton">#fd4a6c</color>
     <color name="doneButtonSheet">#fd4a6c</color>
     <color name="colorText">#fff</color>
+    <color name="colorBottomSheetText">@color/colorBlack</color>
+    <color name="colorItemLayout">@color/colorBlack</color>
     <!--more component-->
     <color name="border">#fff</color>
 </resources>

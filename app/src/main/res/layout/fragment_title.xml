@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:fitsSystemWindows="true"
+             android:background="@color/colorBackgroundFragment"
+>
+    <ImageView android:layout_width="match_parent"
+               android:layout_height="275dp"
+               android:scaleType="fitXY"
+               android:background="@drawable/gradient_title"/>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:theme="@style/ThemmeCategory"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+    >
+        <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:fitsSystemWindows="true"
+                android:outlineSpotShadowColor="#00000000">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:background="@drawable/gradient_category_top"
+                    android:id="@+id/collapsing_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    android:fitsSystemWindows="true"
+                    app:expandedTitleGravity="center"
+                    app:collapsedTitleGravity="center"
+                    app:collapsedTitleTextAppearance="@style/styleTextToolbar"
+                    app:expandedTitleTextAppearance="@style/styleTextToolbar">
+                <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        app:title="Moods"
+                        android:paddingRight="50dp"
+                        android:gravity="top"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        app:layout_collapseMode="pin">
+                    <ImageView android:layout_width="20dp"
+                               android:src="@mipmap/back"
+                               android:layout_height="20dp"
+                               android:contentDescription="@null"/>
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:id="@+id/lnList"
+                android:fitsSystemWindows="true"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <View android:layout_width="match_parent"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  android:layout_height="50dp"
+                  android:background="@drawable/gradient_category_bot"
+                  >
+            </View>
+            <View android:layout_width="match_parent"
+                  android:layout_marginTop="50dp"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  android:layout_height="match_parent"
+                  android:background="@color/colorBackgroundFragment">
+            </View>
+            <androidx.recyclerview.widget.RecyclerView
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:id="@+id/rvList"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

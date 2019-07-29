@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
-        android:background="@color/colorBackground"
+        android:background="@color/colorItemLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="10dp"
@@ -15,21 +15,24 @@
             android:layout_marginStart="20dp"
             tools:ignore="RtlCompat">
         <!--<com.google.android.youtube.player.YouTubeThumbnailView-->
-                <!--android:id="@+id/thumnailView"-->
-                <!--android:layout_width="100dp"-->
-                <!--android:layout_height="70dp"-->
-                <!--app:layout_constraintStart_toStartOf="parent"/>-->
+        <!--android:id="@+id/thumnailView"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="70dp"-->
+        <!--app:layout_constraintStart_toStartOf="parent"/>-->
         <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/avatarImageView"
+                android:id="@+id/ivAvatar"
                 android:layout_width="100dp"
                 android:layout_height="70dp"
-                app:layout_constraintStart_toStartOf="parent"/>
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+        />
+
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/durationTextView"
+                android:id="@+id/tvDuration"
                 android:alpha="0.5"
-                android:background="@color/colorBackground"
+                android:background="@color/colorItemLayout"
                 tools:text="4:09"
                 android:layout_gravity="end|top"
                 android:layout_marginEnd="5dp"
@@ -37,14 +40,15 @@
                 android:paddingStart="2dp"
                 android:paddingEnd="2dp"
                 android:textColor="@color/colorText"
-                android:fontFamily="@font/sf_ui_display_regular" tools:ignore="UnusedAttribute"/>
+                android:fontFamily="@font/sf_ui_display_regular"
+                tools:ignore="UnusedAttribute"/>
     </FrameLayout>
     <TextView
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginTop="8dp"
             android:layout_marginStart="136dp"
-            android:id="@+id/titleTextView"
+            android:id="@+id/tvTitle"
             android:ellipsize="end"
             android:textColor="@color/colorText"
             tools:text="Taylor Swift - ME! (feat. Brendon Urie of Panic! At …The Disco)"
@@ -57,7 +61,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginTop="44dp"
-            android:id="@+id/channelTextView"
+            android:id="@+id/tvChannel"
             android:ellipsize="end"
             android:alpha="0.5"
             android:textColor="@color/colorText"
@@ -70,9 +74,9 @@
             android:layout_marginStart="136dp"/>
     <TextView
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/channelTextView"
+            app:layout_constraintLeft_toRightOf="@id/tvChannel"
             android:layout_marginTop="44dp"
-            android:id="@+id/viewCountTextView"
+            android:id="@+id/tvViewCount"
             android:ellipsize="end"
             android:alpha="0.5"
             android:textColor="@color/colorText"
@@ -84,7 +88,7 @@
             tools:ignore="RtlCompat"/>
     <ImageView android:layout_width="16dp"
                android:layout_height="4dp"
-               android:id="@+id/settingImage"
+               android:id="@+id/ivSetting"
                android:src="@mipmap/more"
                android:layout_marginEnd="24dp"
                app:layout_constraintTop_toTopOf="parent"

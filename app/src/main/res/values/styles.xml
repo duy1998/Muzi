@@ -1,11 +1,49 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="ThemmeCategory" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">#00000000</item>
+        <item name="colorPrimaryDark">#00000000</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="styleTextToolbar">
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/sf_ui_display_bold</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+    <style name="styleTextToolbar1">
+        <item name="android:fontFamily" tools:ignore="NewApi">@font/sf_ui_display_bold</item>
+        <item name="android:textColor">#fd4a6c</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name= "styleBackGroundToolBar">
+        <item name="android:background">@drawable/backgound_category</item>
+    </style>
+
+    <style name="AppTheme.GradientStatusBar" parent="AppTheme">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="lollipop">true</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">#00000000</item>
+
+        <!--Overridden section-->
+        <item name="listPreferredItemHeightSmall">56dp</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
 </resources>

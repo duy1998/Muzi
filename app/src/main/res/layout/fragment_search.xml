@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/searchLayout"
+        android:id="@+id/layoutSearch"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:background="@color/colorBackgroundFragment">
@@ -20,14 +20,14 @@
         <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/keywordRecyclerView"
+                android:id="@+id/rvKeyword"
                 android:translationZ="1dp">
         </androidx.recyclerview.widget.RecyclerView>
         <androidx.recyclerview.widget.RecyclerView
                 android:translationZ="0dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/searchRecyclerView">
+                android:id="@+id/rvSearch">
         </androidx.recyclerview.widget.RecyclerView>
 
     </FrameLayout>
